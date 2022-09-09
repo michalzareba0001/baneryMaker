@@ -2,5 +2,35 @@
     margin:0%;
     padding:0%;
     box-sizing: border-box;
-    font-size: 16px;
+}
+
+header {
+    background-color: rgb(200, 0 , 0);
+    min-height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top:0;
+}
+
+main {
+    position: relative;
+    top: 10rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 60% 20%;
+
+    #footerLeft {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: right;
+    }
 }
