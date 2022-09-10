@@ -23,7 +23,7 @@
     <title>Banery Maker</title>
 </head>
 <body>
-    <script src="./banery.js"></script>
+    <script src="banery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <header>
@@ -31,14 +31,21 @@
     </header>
     <main id="main">
         <div class="baner">
-            <div class="baner_text">
+            <div class="baner_form">
+                <form name="banerInput">
+                    <h4>1-wsza linia textu: </h4><input type="text" id="baner_text_i1" value="Pierwszy wers tekstu">
+                    <h4>2-ga linia textu: </h4><input type="text" id="baner_text_i2" value="Drugi wers tekstu">
+
+                    <h4>Kolor tła:<input type="color" id="baner_color" value="#000000"></h4>
+                    <input type="button" value="Zmień" onclick="changeText()">
+                </form>
             </div>
             <div class="baner_image" id="baner_image">
-                       <h1>Generate a PDF with JavaScript</h1>
-                       <p>published on APITemplate.io</p>
-                </div>
+                       <h1 id="text_out1">SPRZEDAM/WYNAJMĘ</h1>
+                       <h2 id="text_out2">tel. 555 555 555</h2>
+            </div>
             
-            <button class="mybutton1" onclick="generatePDF()">Generate PDF using jsPDF</button>
+            <button class="mybutton1" onclick="generatePDF()">Zrób i pobierz PDF</button>
 
             </div>
         </div>

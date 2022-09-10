@@ -20,11 +20,18 @@ main {
   position: relative;
   top: 10rem;
 }
+main .baner_form {
+  min-height: 6rem;
+  margin: 1rem;
+  padding: 1rem;
+}
 main #baner_image {
-  width: 100%;
-  height: 10cm;
+  width: 50rem;
+  height: 25rem;
   background-color: rgb(255, 255, 0);
   position: relative;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 footer {
@@ -38,4 +45,16 @@ footer #footerLeft {
   grid-column-start: 3;
   grid-column-end: 4;
   text-align: right;
+}
+
+.mybutton1 {
+  background-color: rgb(10, 141, 21);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 2rem;
+  cursor: pointer;
 }/*# sourceMappingURL=banery.css.map */
