@@ -20,6 +20,12 @@ main {
   position: relative;
   top: 10rem;
 }
+main #baner_image {
+  width: 100%;
+  height: 10cm;
+  background-color: rgb(255, 255, 0);
+  position: relative;
+}
 
 footer {
   position: absolute;

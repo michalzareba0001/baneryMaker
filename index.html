@@ -5,21 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="banery.css">
-    <script src="banery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+        const element = document.getElementById('baner_image');
+        var opt = {
+           margin:       1,
+           filename:     'html2pdf_example.pdf',
+           image:        { type: 'svg'},
+           html2canvas:  { scale: 2 },
+           jsPDF:        { unit: 'cm', format: [200, 100], orientation: 'landscape' }
+         };
+         // Choose the element that our invoice is rendered in.
+         html2pdf().set(opt).from(element).save();
+        }
+       </script>
     <title>Banery Maker</title>
 </head>
 <body>
+    <script src="./banery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <header>
         <h1>Banery Maker</h1>
     </header>
     <main id="main">
         <div class="baner">
-            <div class="baner__text">
-                <h2 class="baner__title">Tytuł</h2>
-                <p class="baner__description">Opis</p>
+            <div class="baner_text">
             </div>
-            <div class="baner__image">
-                <img src="https://via.placeholder.com/300x200" alt="baner">
+            <div class="baner_image" id="baner_image">
+                       <h1>Generate a PDF with JavaScript</h1>
+                       <p>published on APITemplate.io</p>
+                </div>
+            
+            <button class="mybutton1" onclick="generatePDF()">Generate PDF using jsPDF</button>
+
             </div>
         </div>
     </main>
