@@ -24,18 +24,52 @@ main .baner_form {
   min-height: 6rem;
   margin: 1rem;
   padding: 1rem;
+  font-size: 1.2rem;
+}
+main .baner_form #baner_text_i1, main .baner_form #baner_text_i2 {
+  height: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+main .baner_form #baner_color {
+  height: 2rem;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 main #baner_image {
-  width: 50rem;
-  height: 25rem;
+  width: 80rem;
+  height: 40rem;
   background-color: rgb(255, 255, 0);
   position: relative;
   margin: 1rem;
   padding: 1rem;
 }
+main #baner_image #text_out1 {
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+}
+main #baner_image #text_out2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
 
 footer {
-  position: absolute;
   bottom: 0;
   display: grid;
   width: 100%;
@@ -49,6 +83,7 @@ footer #footerLeft {
 
 .mybutton1 {
   background-color: rgb(10, 141, 21);
+  border-radius: 10px;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -56,5 +91,23 @@ footer #footerLeft {
   display: inline-block;
   font-size: 2rem;
   margin: 2rem;
+  cursor: pointer;
+}
+
+.mybutton1:hover {
+  box-shadow: 5px 10px black;
+  color: rgb(227, 195, 15);
+}
+
+.mybutton2 {
+  background-color: rgb(10, 141, 21);
+  border-radius: 10px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 1rem;
   cursor: pointer;
 }/*# sourceMappingURL=banery.css.map */

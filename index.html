@@ -11,10 +11,10 @@
         const element = document.getElementById('baner_image');
         var opt = {
            margin:       1,
-           filename:     'html2pdf_example.pdf',
-           image:        { type: 'svg'},
+           filename:     'test.pdf',
+           image:        { type: 'jpeg', quality: 0.98 },
            html2canvas:  { scale: 2 },
-           jsPDF:        { unit: 'cm', format: [200, 100], orientation: 'landscape' }
+           jsPDF:        { unit: 'cm', format: [20, 10], orientation: 'landscape' }
          };
          // Choose the element that our invoice is rendered in.
          html2pdf().set(opt).from(element).save();
@@ -36,8 +36,8 @@
                     <h4>1-wsza linia textu: </h4><input type="text" id="baner_text_i1" value="Pierwszy wers tekstu">
                     <h4>2-ga linia textu: </h4><input type="text" id="baner_text_i2" value="Drugi wers tekstu">
 
-                    <h4>Kolor tła:<input type="color" id="baner_color" value="#000000"></h4>
-                    <input type="button" value="Zmień" onclick="changeText()">
+                    <h4>Kolor tła:</h4> <input type="color" id="baner_color" value="#000000"><br/>
+                    <input type="button" class="mybutton2" value="Zmień" onclick="changeText()">
                 </form>
             </div>
             <div class="baner_image" id="baner_image">
