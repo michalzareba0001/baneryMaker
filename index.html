@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="banery.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
         function generatePDF() {
-        const element = document.getElementById('baner_image');
-        var opt = {
-           margin:       1,
-           filename:     'test.pdf',
-           image:        { type: 'jpeg', quality: 0.98 },
-           html2canvas:  { scale: 2 },
-           jsPDF:        { unit: 'cm', format: [20, 10], orientation: 'landscape' }
-         };
-         // Choose the element that our invoice is rendered in.
-         html2pdf().set(opt).from(element).save();
+            const element = document.getElementById('baner_image');
+            var opt = {
+                margin: 1,
+                filename: 'test.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'cm', format: [20, 10], orientation: 'landscape' }
+            };
+            // Choose the element that our invoice is rendered in.
+            html2pdf().set(opt).from(element).save();
         }
-       </script>
+    </script>
     <title>Banery Maker</title>
 </head>
+
 <body>
     <script src="banery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    <header>
+    <header class="badge text-bg-secondary">
         <h1>Banery Maker</h1>
     </header>
     <main id="main">
         <div class="baner">
             <div class="baner_form">
                 <form name="banerInput">
-                    <h4>1-wsza linia textu: </h4><input type="text" id="baner_text_i1" value="Pierwszy wers tekstu">
-                    <h4>2-ga linia textu: </h4><input type="text" id="baner_text_i2" value="Drugi wers tekstu">
+                    <h4 class="form-label">1-wsza linia textu: </h4><input type="text" id="baner_text_i1"
+                        class="form-control" value="Pierwszy wers tekstu">
+                    <h4 class="form-label">2-ga linia textu: </h4><input type="text" id="baner_text_i2"
+                        class="form-control" value="Drugi wers tekstu">
 
-                    <h4>Kolor tła:</h4> <input type="color" id="baner_color" value="#000000"><br/>
-                    <input type="button" class="mybutton2" value="Zmień" onclick="changeText()">
+                    <h4 class="form-label">Kolor tła:</h4> <input type="color" id="baner_color" class="form-control"
+                        value="#999900"><br />
+
+                    <h4 class="form-label">Rozmiar baneru:</h4>
+                    <input class ="form-check-input" type="radio" id="100x100" name="baner_size" value=100100>
+                    <label class ="form-check-label"for="100x100">100 x 100 cm</label><br>
+                    <input class ="form-check-input" type="radio" id="200x100" name="baner_size" value=200100>
+                    <label class ="form-check-label"for="200x100">200 x 100 cm</label><br>
+                    <input class ="form-check-input" type="radio" id="300x100" name="baner_size" value=300x100>
+                    <label class ="form-check-label"for="300x100">300 x 100 cm</label>
+                    <br/>
+                    <br/>
+                    <input type="button" class="btn btn-primary" value="Zmień" onclick="changeText()">
                 </form>
             </div>
             <div class="baner_image" id="baner_image">
-                       <h1 id="text_out1">SPRZEDAM/WYNAJMĘ</h1>
-                       <h2 id="text_out2">tel. 555 555 555</h2>
+                <h1 id="text_out1">SPRZEDAM/WYNAJMĘ</h1>
+                <h2 id="text_out2">tel. 555 555 555</h2>
             </div>
-            
-            <button class="mybutton1" onclick="generatePDF()">Zrób i pobierz PDF</button>
 
-            </div>
+            <button class="btn btn-success" onclick="generatePDF()">Zrób i pobierz PDF</button>
+
+        </div>
         </div>
     </main>
-    <footer>
+    <footer class="badge text-bg-secondary">
         <div id="footerLeft">© 2022 Banery Maker</div>
-    </footer>        
+    </footer>
 </body>
+
 </html>

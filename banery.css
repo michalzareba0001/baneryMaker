@@ -7,10 +7,10 @@
 header {
   background-color: rgb(200, 0, 0);
   min-height: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
   position: absolute;
   width: 100%;
   top: 0;
@@ -19,6 +19,7 @@ header {
 main {
   position: relative;
   top: 10rem;
+  padding: 2rem;
 }
 main .baner_form {
   min-height: 6rem;
@@ -31,11 +32,12 @@ main .baner_form #baner_text_i1, main .baner_form #baner_text_i2 {
   margin: 1rem;
   padding: 1rem;
   font-size: 1.2rem;
+  width: 30%;
 }
 main .baner_form #baner_color {
-  height: 2rem;
-  margin: 1rem;
-  font-size: 1.2rem;
+  width: 6rem;
+  height: 3rem;
+  cursor: pointer;
 }
 main #baner_image {
   width: 80rem;
