@@ -21,34 +21,42 @@ main {
   top: 10rem;
   padding: 2rem;
 }
-main .baner_form {
+main .baner {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+}
+main .baner .baner_form {
+  grid-column-start: 1;
+  grid-column-end: 2;
   min-height: 6rem;
   margin: 1rem;
   padding: 1rem;
   font-size: 1.2rem;
 }
-main .baner_form #baner_text_i1, main .baner_form #baner_text_i2 {
+main .baner .baner_form #baner_text_i1, main .baner .baner_form #baner_text_i2 {
   height: 2rem;
   margin: 1rem;
   padding: 1rem;
   font-size: 1.2rem;
-  width: 30%;
+  width: 60%;
 }
-main .baner_form #baner_color {
+main .baner .baner_form #baner_color {
   width: 6rem;
   height: 3rem;
   cursor: pointer;
 }
-main #baner_image {
-  width: 80rem;
-  height: 40rem;
-  background-color: rgb(255, 255, 0);
+main .baner #baner_image {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  width: 1000px;
+  height: 500px;
+  background-color: #fff600;
   position: relative;
   margin: 1rem;
   padding: 1rem;
 }
-main #baner_image #text_out1 {
-  margin-top: 10%;
+main .baner #baner_image #text_out1 {
+  margin-top: 13%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -59,7 +67,7 @@ main #baner_image #text_out1 {
   font-weight: bold;
   text-align: center;
 }
-main #baner_image #text_out2 {
+main .baner #baner_image #text_out2 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -72,14 +80,11 @@ main #baner_image #text_out2 {
 }
 
 footer {
+  position: absolute;
   bottom: 0;
-  display: grid;
   width: 100%;
-  grid-template-columns: 20% 60% 20%;
 }
 footer #footerLeft {
-  grid-column-start: 3;
-  grid-column-end: 4;
   text-align: right;
 }
 
