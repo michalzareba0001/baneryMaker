@@ -26,7 +26,6 @@ var changeText = function () {
         textOut1.style.marginTop = '13%';   
         let x = 100;
         let y = 100;
-        generatePDF(100, 100);
     }
     if (banerSize == '200100') {
         document.getElementById('baner_image').style.width = '1000px';
@@ -41,5 +40,26 @@ var changeText = function () {
     }
 
 };
+
+function generatePDF(x, y) {
+    const element = document.getElementById('baner_image');
+    var opt = {
+        margin: 0,
+        filename: 'test.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 5, width: 1000, height: 500, y: 130 },
+        jsPDF: {
+            unit: 'cm',
+            format: [x, y],
+            layout: 'single',
+            zoom: 'fullheight',
+            orientation: 'landscape',
+            
+        }
+    };
+    // Choose the element that our invoice is rendered in.
+    html2pdf().set(opt).from(element).save();
+};
+
 //https://redstapler.co/create-pdf-javascript/
 //https://www.npmjs.com/package/jspdf
