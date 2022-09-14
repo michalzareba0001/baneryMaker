@@ -52,16 +52,16 @@ main .baner #baner_image {
   height: 500px;
   background-color: #fff600;
   position: relative;
-  margin: 1rem;
-  padding: 1rem;
-}
-main .baner #baner_image #text_out1 {
-  margin-top: 13%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 500px !important;
+}
+main .baner #baner_image #text_out1 {
+  width: 100%;
   color: rgb(0, 0, 0);
   font-size: 5rem;
   font-weight: bold;
@@ -69,10 +69,6 @@ main .baner #baner_image #text_out1 {
 }
 main .baner #baner_image #text_out2 {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   color: rgb(0, 0, 0);
   font-size: 4rem;
   font-weight: bold;
