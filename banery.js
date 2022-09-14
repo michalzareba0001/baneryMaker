@@ -4,11 +4,11 @@ var changeText = function () {
     var banerColor = document.getElementById('baner_color').value;
     var textOut1 = document.getElementById('text_out1');
     var textOut2 = document.getElementById('text_out2');
-    
+
     document.getElementById('text_out1').innerHTML = text1;
     document.getElementById('text_out2').innerHTML = text2;
     document.getElementById('baner_image').style.backgroundColor = banerColor;
-    
+
 
     console.log(text1);
     console.log(text2);
@@ -22,24 +22,24 @@ var changeText = function () {
     console.log(banerSize);
     if (banerSize == '100100') {
         document.getElementById('baner_image').style.width = '500px';
-        document.getElementById('baner_image').style.height = '500px';   
-        textOut1.style.marginTop = '13%';   
+        document.getElementById('baner_image').style.height = '500px';
+        textOut1.style.marginTop = '13%';
         var x = 100;
         var y = 100;
         return x, y;
     }
     if (banerSize == '200100') {
         document.getElementById('baner_image').style.width = '1000px';
-        document.getElementById('baner_image').style.height = '500px';  
-        textOut1.style.marginTop = '13%';  
+        document.getElementById('baner_image').style.height = '500px';
+        textOut1.style.marginTop = '13%';
         var x = 200;
-        var y = 100; 
+        var y = 100;
         return x, y;
     }
-    if (banerSize =='300100') {
+    if (banerSize == '300100') {
         document.getElementById('baner_image').style.width = '1000px';
         document.getElementById('baner_image').style.height = '333px';
-        textOut1.style.marginTop = '6%';   
+        textOut1.style.marginTop = '6%';
         var x = 300;
         var y = 100;
         return x, y;
@@ -66,7 +66,7 @@ function generatePDF(x, y) {
     html2pdf().set(opt).from(element).save();
 };
 
-function generatePDF2(){
+function generatePDF2() {
     const element = document.getElementById('baner_image');
     var textOut1 = document.getElementById('text_out1');
 
@@ -78,28 +78,36 @@ function generatePDF2(){
         zoom: 'fullpage'
     });
 
-    
 
-    html2canvas(element, { scale:5 }).then(function (canvas) {
+
+    html2canvas(element, { scale: 5 }).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
         doc.addImage(imgData, 'PNG', 0, 0, 200, 100);
         doc.save('test.pdf');
     });
- 
-        
+
+
 
 }
 
-function generatePDF3 (){
+function generateJpeg() {
     var node = document.getElementById('baner_image');
 
-    domtoimage.toJpeg(node, { width: 6000, height:3000, quality: 0.99 })
-    .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
-        link.href = dataUrl;
-        link.click();
-    });
+    domtoimage.toJpeg(node, {
+        quality: 0.99,
+        width: node.clientWidth * 10,
+        height: node.clientHeight * 10,
+        style: {
+            'transform': 'scale(10)',
+            'transform-origin': '50% 50%',
+        }
+    })
+        .then(function (dataUrl) {
+            var link = document.createElement('a');
+            link.download = 'yourbaner.jpeg';
+            link.href = dataUrl;
+            link.click();
+        });
 }
 
 
