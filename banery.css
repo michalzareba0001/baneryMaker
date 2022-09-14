@@ -50,7 +50,6 @@ main .baner #baner_image {
   grid-column-end: 3;
   width: 1000px;
   height: 500px;
-  background-color: #fff600;
   position: relative;
   margin: 0;
   padding: 0;

@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 
     <title>Banery Maker</title>
 </head>
@@ -19,17 +21,17 @@
     <header class="badge text-bg-secondary">
         <h1>Banery Maker</h1>
     </header>
-    <main id="main">
-        <div class="baner">
+    <main id="main" ng-app="" ng-init="text1='SPRZEDAM/WYNAJMĘ'">
+        <div class="baner" ng-init="text2='tel. 555 555 555'">
             <div class="baner_form">
-                <form name="banerInput">
+                <form name="banerInput" ng-init="bgColor='#fff000'">
                     <h4 class="form-label">1-wsza linia textu: </h4><input type="text" id="baner_text_i1"
-                        class="form-control" value="Pierwszy wers tekstu">
+                        class="form-control" ng-model="text1" value="Pierwszy wers tekstu">
                     <h4 class="form-label">2-ga linia textu: </h4><input type="text" id="baner_text_i2"
-                        class="form-control" value="Drugi wers tekstu">
+                        class="form-control" ng-model="text2" value="Drugi wers tekstu">
 
-                    <h4 class="form-label">Kolor tła:</h4> <input type="color" id="baner_color" class="form-control"
-                        value="#999900"><br />
+                    <h4 class="form-label" >Kolor tła:</h4> <input type="color" id="baner_color" class="form-control"
+                        ng-model="bgColor" value="#999900"><br />
 
                     <h4 class="form-label">Rozmiar baneru:</h4>
                     <input class="form-check-input" type="radio" id="100x100" name="baner_size" value=100100>
@@ -40,22 +42,17 @@
                     <label class="form-check-label" for="300x100">300 x 100 cm</label>
                     <br />
                     <br />
-                    <input type="button" class="btn btn-primary" value="Zmień" onclick="changeText()">
+                    <input type="button" class="btn btn-primary" value="Zmień" onclick="changeSize()">
                 </form>
             </div>
 
-            <div class="baner_image" id="baner_image">
-                <h1 id="text_out1">SPRZEDAM/WYNAJMĘ</h1>
-                <h2 id="text_out2">tel. 555 555 555</h2>
+            <div class="baner_image" id="baner_image" style="background-color:{{bgColor}}">
+                <h1 id="text_out1">{{text1}}</h1>
+                <h2 id="text_out2">{{text2}}</h2>
             </div>
 
-         
             <button class="btn btn-success" onclick="generateJpeg()">Zapisz projekt</button>
             
-        
-       
-            
-
         </div>
         </div>
     </main>
