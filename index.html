@@ -21,38 +21,47 @@
     <header class="badge text-bg-secondary">
         <h1>Banery Maker</h1>
     </header>
-    <main id="main" ng-app="" ng-init="text1='SPRZEDAM/WYNAJMĘ'">
+    <main id="main" ng-app="" ng-init="text1='SPRZEDAM / WYNAJMĘ'">
         <div class="baner" ng-init="text2='tel. 555 555 555'">
+
             <div class="baner_form">
-                <form name="banerInput" ng-init="bgColor='#fff000'">
+                <form name="banerInput" ng-init="bgColor='#fff000'; textColor='#000000'">
                     <h4 class="form-label">1-wsza linia textu: </h4><input type="text" id="baner_text_i1"
-                        class="form-control" ng-model="text1" value="Pierwszy wers tekstu">
+                        class="form-control" ng-model="text1">
                     <h4 class="form-label">2-ga linia textu: </h4><input type="text" id="baner_text_i2"
-                        class="form-control" ng-model="text2" value="Drugi wers tekstu">
-
-                    <h4 class="form-label" >Kolor tła:</h4> <input type="color" id="baner_color" class="form-control"
-                        ng-model="bgColor" value="#999900"><br />
-
-                    <h4 class="form-label">Rozmiar baneru:</h4>
-                    <input class="form-check-input" type="radio" id="100x100" name="baner_size" value=100100>
-                    <label class="form-check-label" for="100x100">100 x 100 cm</label><br>
-                    <input class="form-check-input" type="radio" id="200x100" name="baner_size" value=200100>
-                    <label class="form-check-label" for="200x100">200 x 100 cm</label><br>
-                    <input class="form-check-input" type="radio" id="300x100" name="baner_size" value=300100>
-                    <label class="form-check-label" for="300x100">300 x 100 cm</label>
-                    <br />
-                    <br />
-                    <input type="button" class="btn btn-primary" value="Zmień" onclick="changeSize()">
+                        class="form-control" ng-model="text2">
+                    <div class="colors">
+                        <h4 class="form-label tlo_opis">Kolor tła:</h4> <input type="color" id="baner_color"
+                            class="form-control" ng-model="bgColor">
+                        <h4 class="form-label text_opis">Kolor tekstu:</h4> <input type="color" id="text_color"
+                            class="form-control" ng-model="textColor"><br />
+                    </div>
+                    <h4 class="form-label rozmiar_opis">Rozmiar baneru:</h4>
+                    <div class="baner_size">
+                        <button id="100x100" class="btn btn-warning"
+                            onclick="changeBanerSize(500, 500)">100x100</button>
+                        <button id="200x100" class="btn btn-warning"
+                            onclick="changeBanerSize(1000, 500)">200x100</button>
+                        <button id="300x100" class="btn btn-warning"
+                            onclick="changeBanerSize(1000, 333)">300x100</button>
+                        <button id="300x125" class="btn btn-warning"
+                            onclick="changeBanerSize(1000, 416)">300x125</button>
+                        <button id="400x100" class="btn btn-warning"
+                            onclick="changeBanerSize(1000, 250)">400x100</button>
+                        <button id="400x150" class="btn btn-warning"
+                            onclick="changeBanerSize(1000, 375)">400x150</button>
+                    </div>
                 </form>
             </div>
-
-            <div class="baner_image" id="baner_image" style="background-color:{{bgColor}}">
-                <h1 id="text_out1">{{text1}}</h1>
-                <h2 id="text_out2">{{text2}}</h2>
+            <div class="baner_container">
+                <div class="baner_image" id="baner_image" style="background-color:{{bgColor}}">
+                    <h1 id="text_out1" style="color:{{textColor}}">{{text1}}</h1>
+                    <h2 id="text_out2" style="color:{{textColor}}">{{text2}}</h2>
+                </div>
             </div>
-
-            <button class="btn btn-success" onclick="generateJpeg()">Zapisz projekt</button>
-            
+            <div class="save_button">
+                <button class="btn btn-success zapisz" onclick="generateJpeg()">Zapisz projekt</button>
+            </div>
         </div>
         </div>
     </main>

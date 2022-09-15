@@ -1,30 +1,7 @@
-var changeSize = function () {
-    var checkSize = document.getElementsByName('baner_size');
-    for (var i = 0; i < checkSize.length; i++) {
-        if (checkSize[i].checked) {
-            var banerSize = checkSize[i].value;
-        }
-    }
-
-    if (banerSize == '100100') {
-        document.getElementById('baner_image').style.width = '500px';
-        document.getElementById('baner_image').style.height = '500px';
-        
-       
-    }
-    if (banerSize == '200100') {
-        document.getElementById('baner_image').style.width = '1000px';
-        document.getElementById('baner_image').style.height = '500px';
-        
-    
-    }
-    if (banerSize == '300100') {
-        document.getElementById('baner_image').style.width = '1000px';
-        document.getElementById('baner_image').style.height = '333px';
-           
-    }
-
-};
+function changeBanerSize(x, y){
+    document.getElementById('baner_image').style.width = x + 'px';
+    document.getElementById('baner_image').style.height = y + 'px';
+}
 
 function generateJpeg() {
     var node = document.getElementById('baner_image');
