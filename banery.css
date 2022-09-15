@@ -132,4 +132,22 @@ footer #footerLeft {
   margin-top: 6rem;
   width: 40%;
   height: 3rem;
+}
+
+@media screen and (max-width: 1250px) {
+  #main .baner {
+    grid-template-columns: 1fr;
+  }
+  #main .baner .baner_form {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #main .baner .baner_container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }/*# sourceMappingURL=banery.css.map */
