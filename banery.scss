@@ -17,7 +17,7 @@ header {
 }
 
 main {
-    position: relative;
+    position: absolute;
     top: 6rem;
     padding: 2rem;
 
@@ -135,20 +135,12 @@ main {
     }
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 
-    #footerLeft {
-
-        text-align: right;
-    }
-}
 
 .save_button {
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
 
     .zapisz {
         margin-top: 6rem;
@@ -157,6 +149,14 @@ footer {
     }
 }
 
+.footer {
+    width: 100%;
+
+    #footerLeft {
+
+        text-align: right;
+    }
+}
 @media screen and (max-width: 1250px) {
     #main {
         .baner {
