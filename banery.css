@@ -19,7 +19,7 @@ header {
 main {
   position: absolute;
   top: 6rem;
-  padding: 2rem;
+  width: 100%;
 }
 main .baner {
   display: grid;
@@ -126,14 +126,10 @@ main .baner #baner_image #text_out2 {
   height: 3rem;
 }
 
-.footer {
-  width: 100%;
-}
-.footer #footerLeft {
-  text-align: right;
-}
-
 @media screen and (max-width: 1250px) {
+  #main {
+    padding: 0;
+  }
   #main .baner {
     grid-template-columns: 1fr;
   }
@@ -144,6 +140,36 @@ main .baner #baner_image #text_out2 {
     grid-row-end: 2;
   }
   #main .baner .baner_container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+@media screen and (max-width: 800px) {
+  #main {
+    padding: 0;
+  }
+  #main .baner {
+    grid-template-columns: 1fr;
+  }
+  #main .baner .baner_form {
+    max-width: 100vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  #main .baner .baner_form .baner_size {
+    flex-direction: column;
+  }
+  #main .baner .baner_form .baner_size button {
+    margin-bottom: 1rem;
+    min-width: 50%;
+  }
+  #main .baner .baner_container {
+    max-width: 100vw;
+    overflow: scroll;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;

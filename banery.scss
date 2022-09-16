@@ -19,7 +19,7 @@ header {
 main {
     position: absolute;
     top: 6rem;
-    padding: 2rem;
+    width: 100%;
 
     .baner {
         display: grid;
@@ -149,16 +149,11 @@ main {
     }
 }
 
-.footer {
-    width: 100%;
 
-    #footerLeft {
-
-        text-align: right;
-    }
-}
+//tablet
 @media screen and (max-width: 1250px) {
     #main {
+        padding: 0;
         .baner {
             grid-template-columns: 1fr;
 
@@ -178,4 +173,41 @@ main {
         }
     }
 
+}
+
+//mobile
+@media screen and (max-width: 800px) {
+    #main {
+        padding: 0;
+
+        .baner {
+            grid-template-columns: 1fr;
+
+            .baner_form {
+                max-width: 100vw;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+
+                .baner_size{
+                    flex-direction: column;
+
+                    button{
+                        margin-bottom: 1rem;
+                        min-width: 50%;
+                    }
+                }
+            }
+
+            .baner_container {
+                max-width: 100vw;
+                overflow: scroll;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+        }
+    }
 }
