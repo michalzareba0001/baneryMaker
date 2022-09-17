@@ -2,10 +2,12 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 header {
-  background-color: rgb(200, 0, 0);
+  background-color: #feed43 !important;
+  color: #222329;
   min-height: 6rem;
   display: flex !important;
   justify-content: center !important;
@@ -14,6 +16,11 @@ header {
   position: absolute;
   width: 100%;
   top: 0;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem;
 }
 
 main {
@@ -121,9 +128,36 @@ main .baner #baner_image #text_out2 {
   margin-bottom: 3rem;
 }
 .save_button .zapisz {
+  border: 1px solid #feec00;
+  background: #feec00;
+  color: #000;
   margin-top: 6rem;
-  width: 40%;
+  width: 30%;
   height: 3rem;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  border-radius: 7px;
+}
+.save_button .zapisz:hover {
+  background: #000 !important;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.bm_button {
+  border: 1px solid #feec00;
+  background: #feec00;
+  color: #000;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.bm_button:hover {
+  background: #000 !important;
+  color: #ffffff !important;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1250px) {

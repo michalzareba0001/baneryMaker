@@ -12,43 +12,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 
-    <title>Banery Maker</title>
+    <title>Zrób baner</title>
 </head>
 
 <body>
     <script src="banery.js"></script>
 
-    <header class="badge text-bg-secondary">
-        <h1>Banery Maker</h1>
+    <header>
+        <h1>Stwórz swój baner</h1>
     </header>
     <main id="main" ng-app="" ng-init="text1='SPRZEDAM / WYNAJMĘ'">
         <div class="baner" ng-init="text2='tel. 555 555 555'">
 
             <div class="baner_form">
                 <form name="banerInput" ng-init="bgColor='#fff000'; textColor='#000000'">
-                    <h4 class="form-label">1-wsza linia textu: </h4><input type="text" id="baner_text_i1"
+                    <h5 class="form-label">1-wsza linia textu: </h5><input type="text" id="baner_text_i1"
                         class="form-control" ng-model="text1">
-                    <h4 class="form-label">2-ga linia textu: </h4><input type="text" id="baner_text_i2"
+                    <h5 class="form-label">2-ga linia textu: </h5><input type="text" id="baner_text_i2"
                         class="form-control" ng-model="text2">
                     <div class="colors">
-                        <h4 class="form-label tlo_opis">Kolor tła:</h4> <input type="color" id="baner_color"
+                        <h5 class="form-label tlo_opis">Kolor tła:</h5><input type="color" id="baner_color"
                             class="form-control" ng-model="bgColor">
-                        <h4 class="form-label text_opis">Kolor tekstu:</h4> <input type="color" id="text_color"
+                        <h5 class="form-label text_opis">Kolor tekstu:</h5><input type="color" id="text_color"
                             class="form-control" ng-model="textColor"><br />
                     </div>
                     <h4 class="form-label rozmiar_opis">Rozmiar baneru:</h4>
                     <div class="baner_size">
-                        <button id="100x100" class="btn btn-warning"
+                        <button id="100x100" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(500, 500)">100x100</button>
-                        <button id="200x100" class="btn btn-warning"
+                        <button id="200x100" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(1000, 500)">200x100</button>
-                        <button id="300x100" class="btn btn-warning"
+                        <button id="300x100" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(1000, 333)">300x100</button>
-                        <button id="300x125" class="btn btn-warning"
+                        <button id="300x125" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(1000, 416)">300x125</button>
-                        <button id="400x100" class="btn btn-warning"
+                        <button id="400x100" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(1000, 250)">400x100</button>
-                        <button id="400x150" class="btn btn-warning"
+                        <button id="400x150" class="btn btn-warning bm_button"
                             onclick="changeBanerSize(1000, 375)">400x150</button>
                     </div>
                 </form>
