@@ -119,6 +119,7 @@ main .baner #baner_image {
   flex-direction: column;
   font-size: 500px;
   overflow: hidden;
+  padding: 1rem;
 }
 main .baner #baner_image #text_out1 {
   width: 100%;
@@ -171,6 +172,51 @@ main .baner #baner_image #text_out2 {
   background: #000 !important;
   color: #ffffff !important;
   cursor: pointer;
+}
+
+.bm_button:focus {
+  background: #000 !important;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+.jak_zamowic {
+  width: 100%;
+  min-height: 500px;
+  background-color: #feec00;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.jak_zamowic .col1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.jak_zamowic .col2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.jak_zamowic .opisImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 1250px) {
