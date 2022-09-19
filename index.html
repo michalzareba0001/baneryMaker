@@ -26,15 +26,22 @@
 
             <div class="baner_form">
                 <form name="banerInput" ng-init="bgColor='#fff000'; textColor='#000000'">
-                    <h5 class="form-label">1-wsza linia textu: </h5><input type="text" id="baner_text_i1"
-                        class="form-control" ng-model="text1">
+                    <h5 class="form-label">1-wsza linia textu: </h5>
+                    <input type="text" id="baner_text_i1" class="form-control" ng-model="text1">
+                    <p>Rozmiar tekstu: <button id="text1Plus" class="bm_button" onclick="textSize1Plus()">+</button>
+                        <button id="text1Minus" class="bm_button" onclick="textSize1Minus()">-</button>
+                    </p>
                     <h5 class="form-label">2-ga linia textu: </h5><input type="text" id="baner_text_i2"
                         class="form-control" ng-model="text2">
+                    <p>Rozmiar tekstu: <button id="text2Plus" class="bm_button" onclick="textSize2Plus()">+</button>
+                        <button id="text2Minus" class="bm_button" onclick="textSize2Minus()">-</button>
+                    </p>
                     <div class="colors">
                         <h5 class="form-label tlo_opis">Kolor tła:</h5><input type="color" id="baner_color"
                             class="form-control" ng-model="bgColor">
                         <h5 class="form-label text_opis">Kolor tekstu:</h5><input type="color" id="text_color"
                             class="form-control" ng-model="textColor"><br />
+                        
                     </div>
                     <h4 class="form-label rozmiar_opis">Rozmiar baneru:</h4>
                     <div class="baner_size">
@@ -63,10 +70,10 @@
                 <button class="btn btn-success zapisz" onclick="generateJpeg()">Zapisz projekt</button>
             </div>
         </div>
-     
-      
+
+
     </main>
-   
+
 </body>
 
 </html>
