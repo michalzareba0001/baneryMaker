@@ -212,12 +212,18 @@ main {
     color: #ffffff !important;
     cursor: pointer;
 }
+.jak_zamowic_title{
+    text-align: center;
+    background-color: rgba(254, 236, 0, 0.5);
+    padding: 1rem;
+}
+
 .jak_zamowic{
     width: 100%;
-    min-height: 500px;
-    background-color: #feec00;
+    background-color: rgba(254, 236, 0, 0.5);
     display: grid;
     grid-template-columns: 50% 50%;
+    
 
     .col1{
         grid-column-start: 1;
@@ -228,7 +234,8 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 1rem;
+        padding: 5rem;
+        border-right: 0.5rem solid #ffffff;
     }
 
     .col2{
@@ -236,11 +243,13 @@ main {
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 1rem;
+        display: block;
+        padding: 5rem;
+
+        h5 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
     }
 
     .opisImage{
@@ -250,6 +259,10 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding: 1rem;
+    }
+
+    .filmik{
         padding: 1rem;
     }
 }

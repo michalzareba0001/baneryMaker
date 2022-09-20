@@ -180,10 +180,15 @@ main .baner #baner_image #text_out2 {
   cursor: pointer;
 }
 
+.jak_zamowic_title {
+  text-align: center;
+  background-color: rgba(254, 236, 0, 0.5);
+  padding: 1rem;
+}
+
 .jak_zamowic {
   width: 100%;
-  min-height: 500px;
-  background-color: #feec00;
+  background-color: rgba(254, 236, 0, 0.5);
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -196,18 +201,20 @@ main .baner #baner_image #text_out2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: 5rem;
+  border-right: 0.5rem solid #ffffff;
 }
 .jak_zamowic .col2 {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
+  display: block;
+  padding: 5rem;
+}
+.jak_zamowic .col2 h5 {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .jak_zamowic .opisImage {
   width: 100%;
@@ -216,6 +223,9 @@ main .baner #baner_image #text_out2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 1rem;
+}
+.jak_zamowic .filmik {
   padding: 1rem;
 }
 
